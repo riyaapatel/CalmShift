@@ -6,7 +6,7 @@
 
 CalmShift was built during the **Bowling Green Hackathon**, where our team won the **MuuvWell Bounty**.
 
-The challenge focused on improving the well-being of shift workers—people who often experience burnout, irregular schedules, and mental fatigue. Rather than building another traditional wellness app, we wanted to create something people could realistically use during a busy workday.
+The challenge focused on improving the well-being of shift workers, people who often experience burnout, irregular schedules, and mental fatigue. Rather than building another traditional wellness app, we wanted to create something people could realistically use during a busy workday.
 
 Our idea was simple: if someone has five minutes between shifts, can we help them reset, refocus, and return to work feeling a little better?
 
@@ -60,4 +60,4 @@ npm run dev
 
 ## Reflection
 
-Hackathons are always fast-paced, but this project reminded me that the best ideas don't have to be overly complicated—they just need to solve a real problem. Building CalmShift with my teammate in such a short time, and seeing it recognized with the **MuuvWell Bounty**, made the experience even more rewarding.
+Hackathons are always fast-paced, but this project reminded me that the best ideas don't have to be overly complicated, they just need to solve a real problem. Building CalmShift with my teammate in such a short time, and seeing it recognized with the **MuuvWell Bounty**, made the experience even more rewarding.
