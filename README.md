@@ -1,4 +1,4 @@
-# CalmShift 🧠
+# CalmShift
 
 > A hackathon-winning web application that helps shift workers manage mental fatigue through short cognitive exercises, AI-powered wellness recommendations, and gamified engagement.
 
@@ -11,6 +11,8 @@ The challenge focused on improving the well-being of shift workers—people who 
 Our idea was simple: if someone has five minutes between shifts, can we help them reset, refocus, and return to work feeling a little better?
 
 One feature I particularly enjoyed building was **Story Scrolls**. Since the hackathon was centered around the Bowling Green community, I wanted those short stories to feel local instead of generic. Using AI, the app generates quick, Bowling Green-inspired stories followed by simple comprehension questions, turning a short mental break into something both engaging and connected to the community.
+
+Live Demo: https://calmshift-169880713434.us-west1.run.app
 
 ---
 
