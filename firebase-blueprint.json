@@ -1,0 +1,80 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "Public profile for the employee",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "totalPoints": { "type": "integer" },
+        "stressLevel": { "type": "string", "enum": ["normal", "stressed", "too_stressed"] },
+        "lastAssessmentDate": { "type": "string", "format": "date-time" },
+        "streakCount": { "type": "integer" },
+        "lastCheckInDate": { "type": "string", "format": "date" }
+      },
+      "required": ["displayName", "totalPoints"]
+    },
+    "Shift": {
+      "title": "Work Shift",
+      "description": "User custom shift times",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "date": { "type": "string", "format": "date" }
+      },
+      "required": ["userId", "startTime", "endTime", "date"]
+    },
+    "GameScore": {
+      "title": "Game Score",
+      "description": "Records of individual game performance",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "gameId": { "type": "string" },
+        "score": { "type": "integer" },
+        "level": { "type": "integer" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "stressResult": { "type": "string" }
+      },
+      "required": ["userId", "gameId", "score", "level", "timestamp"]
+    },
+    "Activity": {
+      "title": "Health Activity",
+      "description": "AI suggested or user added activities for the daily calendar",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "completed": { "type": "boolean" },
+        "points": { "type": "integer" }
+      },
+      "required": ["userId", "title", "date", "completed"]
+    },
+    "Specialist": {
+      "title": "Specialist",
+      "description": "Professional health provider or performance coach information",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "specialty": { "type": "string" },
+        "insurance": { "type": "string" },
+        "visitors": { "type": "integer" },
+        "type": { "type": "string", "enum": ["doctor", "coach"] },
+        "location": { "type": "string" }
+      },
+      "required": ["name", "email", "insurance", "visitors", "type", "location"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": { "schema": "User", "description": "Employee profiles" },
+    "scores/{scoreId}": { "schema": "GameScore", "description": "Score history" },
+    "activities/{activityId}": { "schema": "Activity", "description": "Daily wellness tasks" },
+    "shifts/{shiftId}": { "schema": "Shift", "description": "User shift schedules" },
+    "specialists/{specialistId}": { "schema": "Specialist", "description": "Available doctors and coaches" }
+  }
+}
